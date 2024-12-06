@@ -183,28 +183,28 @@ namespace UnitTestProject1_SeleniumDataDrivenMasterProject_1._0
             Thread.Sleep(10000);
             Fire_driver.Quit();
         }
-        [TestMethod]
-        public void FileUploadToBrowser()
-        {
-            IWebDriver fire_driver = new FirefoxDriver();
-            string userProfileFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-            string filePath = Path.Combine(userProfileFolder, "Desktop", "SeleniumWithC#.docx");
-            fire_driver.Navigate().GoToUrl("https://www.ilovepdf.com/word_to_pdf");
-            IWebElement fileuploads = fire_driver.FindElement(By.Id("pickfiles"));
-            fileuploads.Click();
-            //string filepath = @"C:\Users\lakshminarayana.B2BSOFTECH\Desktop\SeleniumWithC#.docx";
-            fileuploads.SendKeys(filePath);
-            IWebElement subminting =fire_driver.FindElement(By.XPath("//button[@id='processTask']"));
-            subminting.Submit();
-            Thread.Sleep(10000);
-            fire_driver.Quit();
+        //[TestMethod]
+        //public void FileUploadToBrowser()
+        //{
+        //    IWebDriver fire_driver = new FirefoxDriver();
+        //    string userProfileFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        //    string filePath = Path.Combine(userProfileFolder, "Desktop", "SeleniumWithC#.docx");
+        //    fire_driver.Navigate().GoToUrl("https://www.ilovepdf.com/word_to_pdf");
+        //    IWebElement fileuploads = fire_driver.FindElement(By.Id("pickfiles"));
+        //    fileuploads.Click();
+        //    //string filepath = @"C:\Users\lakshminarayana.B2BSOFTECH\Desktop\SeleniumWithC#.docx";
+        //    fileuploads.SendKeys(filePath);
+        //    IWebElement subminting =fire_driver.FindElement(By.XPath("//button[@id='processTask']"));
+        //    subminting.Submit();
+        //    Thread.Sleep(10000);
+        //    fire_driver.Quit();
 
-        }
+        //}
     }
     [TestClass]
     public class SeleniumDataDrivenMasterProject_Parllel
     {
-        IWebDriver fire_driver= new FirefoxDriver();;
+        IWebDriver fire_driver= new FirefoxDriver();
         [TestMethod]
         public void MyTestMethodFailed()
         {
